@@ -34,10 +34,12 @@ app.get("/api/test/",function(request,response){
 const usuarios = require('./controllers/usuarios');
 const comuna = require('./controllers/comuna');
 const supermercado = require('./controllers/supermercado');
+const tipo_producto = require('./controllers/tipo_producto');
 
 function controladores() {
     // Rutas 
     app.use('/api/usuarios/', usuarios.buscar_todo);
     app.use('/api/comuna/', comuna.buscar_todo);
     app.use('/api/supermercado/', supermercado.buscar_todo);
+    app.use('/api/tipo_producto/', tipo_producto.buscar_todo);
 }
