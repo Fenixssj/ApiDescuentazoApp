@@ -6,7 +6,7 @@ connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
     password: '',
-    database: 'descuentazoapp',
+    database: 'descuentazo_base_de_datos',
     port: 3306
 });
 

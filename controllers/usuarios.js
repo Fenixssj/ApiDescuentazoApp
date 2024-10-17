@@ -1,9 +1,10 @@
-    require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const connection = require('../config/config');
 const app = express();
 
-// para acceder esta consulta es : http://localhost:5500/api/usuarios/todos
+// URL : http://localhost:5500/api/usuarios/todos
+
 module.exports.buscar_todo = app.get('/todos', (request, response) => {  
     const sql = `
             SELECT
@@ -11,8 +12,8 @@ module.exports.buscar_todo = app.get('/todos', (request, response) => {
                 nombre,
                 apellido,
                 correo,
-                pass
-            FROM usuario
+                contraseña
+            FROM usuarios
         `;
     connection.query(sql, (error, results) => {
         if (error) throw error;
