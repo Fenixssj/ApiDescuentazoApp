@@ -3,7 +3,7 @@ const express = require('express');
 const connection = require('../config/config');
 const app = express();
 
-// URL : http://localhost:5500/api/usuarios/todos
+//5 URL : http://localhost:5500/api/usuarios/todos
 
 module.exports.buscar_todo = app.get('/todos', (request, response) => {  
     const sql = `
