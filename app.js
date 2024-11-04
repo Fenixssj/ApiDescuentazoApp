@@ -36,6 +36,7 @@ const comuna = require('./controllers/comuna');
 const supermercado = require('./controllers/supermercado');
 const tipo_producto = require('./controllers/tipo_producto');
 const marca = require('./controllers/marca');
+const producto = require('./controllers/producto');  // En proseso...
 
 function controladores() {
     // Rutas 
@@ -44,4 +45,5 @@ function controladores() {
     app.use('/api/supermercado/', supermercado.buscar_todo);
     app.use('/api/tipo_producto/', tipo_producto.buscar_todo);
     app.use('/api/marca/', marca.buscar_todo);
+    app.use('/api/producto/', producto.buscar_todo);  //  En proseso...
 }
